@@ -1,19 +1,12 @@
-名駅アール歯科・矯正歯科 スワイプLP アップロード用
+矯正スワイプLP アップロード用
 
-■ 使い方
-このフォルダ内の index.html と images フォルダをそのままGitHub Pagesの公開フォルダへアップロードしてください。
+変更内容:
+- 固定CTA削除
+- Instagram風の縦スワイプ/スクロールスナップ化
+- 各スライドを100dvhで統一表示
+- 画像サイズがバラバラでも同じ表示枠に収まるよう object-fit: contain に設定
+- 画像内CTA位置に透明リンクを配置
+- 医院詳細リンクは削除
 
-■ 予約リンク
-https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947
-
-■ 医院詳細リンク
-削除済み。画像クリック・固定CTAはすべて予約リンクに統一しています。
-
-■ 画像順
-01_firstview.jpg
-02_worries.jpg
-03_wire.jpg
-04_mouthpiece.jpg
-05_lingual.jpg
-06_doctors.jpg
-07_access.jpg
+アップロード:
+このフォルダ内の index.html と images フォルダを GitHub Pages のリポジトリ直下に上書きしてください。

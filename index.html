@@ -11,40 +11,66 @@
   <meta property="og:image" content="images/01_firstview.jpg" />
   <style>
     :root{
-      --cta:#e64f7a;
-      --cta2:#c93c67;
-      --bg:#fff6f8;
+      --bg:#0f0f12;
+      --card:#fff;
+      --pink:#e64f7a;
+      --muted:rgba(255,255,255,.64);
+      --gold:#b28a3e;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:#222;}
-    body{overflow-x:hidden;}
-    .lp{width:100%;max-width:430px;margin:0 auto;background:#fff;box-shadow:0 0 30px rgba(0,0,0,.08);padding-bottom:calc(88px + env(safe-area-inset-bottom));}
-    .slide{position:relative;width:100%;line-height:0;background:#fff;scroll-margin-top:0;}
-    .slide a.image-link{display:block;width:100%;}
-    .slide img{display:block;width:100%;height:auto;margin:0;padding:0;border:0;}
-    .fixed-cta{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(400px,calc(100vw - 24px));z-index:20;text-decoration:none;background:linear-gradient(180deg,var(--cta),var(--cta2));color:#fff;border-radius:999px;box-shadow:0 10px 24px rgba(201,60,103,.35);padding:13px 18px;text-align:center;font-weight:800;letter-spacing:.03em;line-height:1.25;font-size:17px;}
-    .fixed-cta small{display:block;font-size:11px;font-weight:700;opacity:.95;margin-bottom:2px;}
-    .fixed-cta .arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:24px;}
-    .top-link{position:fixed;right:12px;bottom:calc(78px + env(safe-area-inset-bottom));z-index:19;background:rgba(255,255,255,.88);border:1px solid rgba(0,0,0,.08);border-radius:999px;color:#555;text-decoration:none;font-size:12px;padding:8px 10px;box-shadow:0 4px 16px rgba(0,0,0,.08);}
-    @media (min-width: 768px){.lp{max-width:430px}.fixed-cta{max-width:400px}}
-    @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+    html,body{margin:0;padding:0;width:100%;height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:#fff;overflow:hidden;}
+    .app{height:100dvh;width:100%;max-width:460px;margin:0 auto;position:relative;background:#111;}
+    .swipeHint{position:absolute;top:calc(10px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:10;background:rgba(0,0,0,.42);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 13px;font-size:12px;letter-spacing:.04em;color:#fff;line-height:1;pointer-events:none;}
+    .slides{height:100dvh;overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;scrollbar-width:none;background:linear-gradient(180deg,#151515,#070707);}
+    .slides::-webkit-scrollbar{display:none}
+    .slide{height:100dvh;min-height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center;padding:calc(34px + env(safe-area-inset-top)) 10px calc(34px + env(safe-area-inset-bottom));position:relative;}
+    .phoneCard{position:relative;width:100%;height:100%;border-radius:20px;background:var(--card);box-shadow:0 16px 50px rgba(0,0,0,.42);overflow:hidden;display:flex;align-items:center;justify-content:center;}
+    .phoneCard img{display:block;width:100%;height:100%;object-fit:contain;background:#fff;user-select:none;-webkit-user-drag:none;}
+    .tapArea{position:absolute;left:5%;right:5%;bottom:3.5%;height:10.5%;border-radius:18px;text-indent:-9999px;z-index:4;}
+    .tapArea:active{background:rgba(230,79,122,.12)}
+    .pager{position:absolute;right:8px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:9;pointer-events:none;}
+    .dot{width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.35);transition:.2s;}
+    .dot.active{height:18px;background:#fff;}
+    .pageNo{position:absolute;left:13px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:9;background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px 10px;font-size:12px;line-height:1;color:#fff;pointer-events:none;}
+    .swipeCue{position:absolute;left:50%;bottom:calc(9px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:9;font-size:11px;color:var(--muted);pointer-events:none;}
+    @media (min-width: 768px){.app{max-width:460px}.slide{padding-left:14px;padding-right:14px}.phoneCard{border-radius:24px}}
+    @media (prefers-reduced-motion:no-preference){.slides{scroll-behavior:smooth}}
   </style>
 </head>
 <body>
-  <main class="lp" id="top" aria-label="矯正スワイプLP">
-    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/01_firstview.jpg" alt="長年の歯並びコンプレックス、もう隠さなくていい。無料カウンセリング予約" loading="eager"></a></section>
-    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/02_worries.jpg" alt="こんなお悩みありませんか。矯正で解決します" loading="lazy"></a></section>
-    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/03_wire.jpg" alt="表側ワイヤー矯正の説明" loading="lazy"></a></section>
-    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/04_mouthpiece.jpg" alt="マウスピース矯正の説明" loading="lazy"></a></section>
-    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/05_lingual.jpg" alt="裏側矯正・ハーフリンガル矯正の説明" loading="lazy"></a></section>
-    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/06_doctors.jpg" alt="ドクター紹介と矯正実績" loading="lazy"></a></section>
-    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/07_access.jpg" alt="名古屋駅から徒歩で通える3つの医院。アクセスページ" loading="lazy"></a></section>
+  <main class="app" aria-label="矯正スワイプLP">
+    <div class="swipeHint">上下にスワイプ</div>
+    <div class="slides" id="slides">
+      <section class="slide" aria-label="1枚目 ファーストビュー"><div class="phoneCard"><img src="images/01_firstview.jpg" alt="長年の歯並びコンプレックス、もう隠さなくていい。"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
+      <section class="slide" aria-label="2枚目 悩み共感"><div class="phoneCard"><img src="images/02_worries.jpg" alt="こんなお悩みありませんか。矯正で変わるかもしれません。"></div></section>
+      <section class="slide" aria-label="3枚目 表側ワイヤー矯正"><div class="phoneCard"><img src="images/03_wire.jpg" alt="表側ワイヤー矯正"></div></section>
+      <section class="slide" aria-label="4枚目 マウスピース矯正"><div class="phoneCard"><img src="images/04_mouthpiece.jpg" alt="マウスピース矯正"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
+      <section class="slide" aria-label="5枚目 裏側矯正・ハーフリンガル"><div class="phoneCard"><img src="images/05_lingual.jpg" alt="裏側矯正・ハーフリンガル矯正"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
+      <section class="slide" aria-label="6枚目 ドクター紹介"><div class="phoneCard"><img src="images/06_doctors.jpg" alt="ドクター紹介と矯正実績"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
+      <section class="slide" aria-label="7枚目 アクセス"><div class="phoneCard"><img src="images/07_access.jpg" alt="名古屋駅から徒歩で通える3つの医院。アクセス"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
+    </div>
+    <div class="pager" id="pager" aria-hidden="true"></div>
+    <div class="pageNo" id="pageNo">1 / 7</div>
+    <div class="swipeCue">↑ swipe ↓</div>
   </main>
-  <a class="top-link" href="#top">↑ TOP</a>
-  <a class="fixed-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947">
-    <small>相談無料・24時間WEB予約受付中</small>
-    無料カウンセリング予約
-    <span class="arrow">›</span>
-  </a>
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const scroller = document.getElementById('slides');
+    const pager = document.getElementById('pager');
+    const pageNo = document.getElementById('pageNo');
+    slides.forEach((_, i) => {
+      const d = document.createElement('span');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      pager.appendChild(d);
+    });
+    const dots = [...document.querySelectorAll('.dot')];
+    const setActive = () => {
+      const idx = Math.round(scroller.scrollTop / window.innerHeight);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      pageNo.textContent = `${Math.min(idx + 1, slides.length)} / ${slides.length}`;
+    };
+    scroller.addEventListener('scroll', () => requestAnimationFrame(setActive), {passive:true});
+    window.addEventListener('resize', setActive);
+  </script>
 </body>
 </html>

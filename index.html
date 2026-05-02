@@ -1,76 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>名駅アール歯科・矯正歯科｜矯正スワイプLP</title>
-  <meta name="description" content="名古屋駅徒歩圏。矯正相談・無料カウンセリング予約はこちら。" />
-  <meta property="og:title" content="名駅アール歯科・矯正歯科｜矯正スワイプLP" />
-  <meta property="og:description" content="名古屋駅徒歩圏。矯正相談・無料カウンセリング予約はこちら。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/01_firstview.jpg" />
-  <style>
-    :root{
-      --bg:#0f0f12;
-      --card:#fff;
-      --pink:#e64f7a;
-      --muted:rgba(255,255,255,.64);
-      --gold:#b28a3e;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;width:100%;height:100%;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:#fff;overflow:hidden;}
-    .app{height:100dvh;width:100%;max-width:460px;margin:0 auto;position:relative;background:#111;}
-    .swipeHint{position:absolute;top:calc(10px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:10;background:rgba(0,0,0,.42);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 13px;font-size:12px;letter-spacing:.04em;color:#fff;line-height:1;pointer-events:none;}
-    .slides{height:100dvh;overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;scrollbar-width:none;background:linear-gradient(180deg,#151515,#070707);}
-    .slides::-webkit-scrollbar{display:none}
-    .slide{height:100dvh;min-height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center;padding:calc(34px + env(safe-area-inset-top)) 10px calc(34px + env(safe-area-inset-bottom));position:relative;}
-    .phoneCard{position:relative;width:100%;height:100%;border-radius:20px;background:var(--card);box-shadow:0 16px 50px rgba(0,0,0,.42);overflow:hidden;display:flex;align-items:center;justify-content:center;}
-    .phoneCard img{display:block;width:100%;height:100%;object-fit:contain;background:#fff;user-select:none;-webkit-user-drag:none;}
-    .tapArea{position:absolute;left:5%;right:5%;bottom:3.5%;height:10.5%;border-radius:18px;text-indent:-9999px;z-index:4;}
-    .tapArea:active{background:rgba(230,79,122,.12)}
-    .pager{position:absolute;right:8px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:9;pointer-events:none;}
-    .dot{width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.35);transition:.2s;}
-    .dot.active{height:18px;background:#fff;}
-    .pageNo{position:absolute;left:13px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:9;background:rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:5px 10px;font-size:12px;line-height:1;color:#fff;pointer-events:none;}
-    .swipeCue{position:absolute;left:50%;bottom:calc(9px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:9;font-size:11px;color:var(--muted);pointer-events:none;}
-    @media (min-width: 768px){.app{max-width:460px}.slide{padding-left:14px;padding-right:14px}.phoneCard{border-radius:24px}}
-    @media (prefers-reduced-motion:no-preference){.slides{scroll-behavior:smooth}}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>名駅アール歯科・矯正歯科｜スワイプLP</title>
+  <meta name="description" content="名古屋駅すぐ。名駅アール歯科・矯正歯科の矯正無料カウンセリング予約ページです。" />
+  <link rel="preload" as="image" href="images/01_firstview.jpg" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="app" aria-label="矯正スワイプLP">
-    <div class="swipeHint">上下にスワイプ</div>
-    <div class="slides" id="slides">
-      <section class="slide" aria-label="1枚目 ファーストビュー"><div class="phoneCard"><img src="images/01_firstview.jpg" alt="長年の歯並びコンプレックス、もう隠さなくていい。"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
-      <section class="slide" aria-label="2枚目 悩み共感"><div class="phoneCard"><img src="images/02_worries.jpg" alt="こんなお悩みありませんか。矯正で変わるかもしれません。"></div></section>
-      <section class="slide" aria-label="3枚目 表側ワイヤー矯正"><div class="phoneCard"><img src="images/03_wire.jpg" alt="表側ワイヤー矯正"></div></section>
-      <section class="slide" aria-label="4枚目 マウスピース矯正"><div class="phoneCard"><img src="images/04_mouthpiece.jpg" alt="マウスピース矯正"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
-      <section class="slide" aria-label="5枚目 裏側矯正・ハーフリンガル"><div class="phoneCard"><img src="images/05_lingual.jpg" alt="裏側矯正・ハーフリンガル矯正"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
-      <section class="slide" aria-label="6枚目 ドクター紹介"><div class="phoneCard"><img src="images/06_doctors.jpg" alt="ドクター紹介と矯正実績"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
-      <section class="slide" aria-label="7枚目 アクセス"><div class="phoneCard"><img src="images/07_access.jpg" alt="名古屋駅から徒歩で通える3つの医院。アクセス"><a class="tapArea" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約">無料カウンセリング予約</a></div></section>
-    </div>
-    <div class="pager" id="pager" aria-hidden="true"></div>
-    <div class="pageNo" id="pageNo">1 / 7</div>
-    <div class="swipeCue">↑ swipe ↓</div>
+  <main class="swipe" id="swipe">
+    
+      <section class="slide" data-slide="1">
+        <div class="image-frame">
+          <img src="images/01_firstview.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 1枚目" loading="eager">
+          <a class="tap-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" target="_blank" rel="noopener" aria-label="無料カウンセリング予約"></a>
+        </div>
+      </section>
+    
+      <section class="slide" data-slide="2">
+        <div class="image-frame">
+          <img src="images/02_worries.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 2枚目" loading="lazy">
+          <a class="tap-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" target="_blank" rel="noopener" aria-label="無料カウンセリング予約"></a>
+        </div>
+      </section>
+    
+      <section class="slide" data-slide="3">
+        <div class="image-frame">
+          <img src="images/03_wire.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 3枚目" loading="lazy">
+          <a class="tap-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" target="_blank" rel="noopener" aria-label="無料カウンセリング予約"></a>
+        </div>
+      </section>
+    
+      <section class="slide" data-slide="4">
+        <div class="image-frame">
+          <img src="images/04_mouthpiece.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 4枚目" loading="lazy">
+          <a class="tap-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" target="_blank" rel="noopener" aria-label="無料カウンセリング予約"></a>
+        </div>
+      </section>
+    
+      <section class="slide" data-slide="5">
+        <div class="image-frame">
+          <img src="images/05_lingual.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 5枚目" loading="lazy">
+          <a class="tap-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" target="_blank" rel="noopener" aria-label="無料カウンセリング予約"></a>
+        </div>
+      </section>
+    
+      <section class="slide" data-slide="6">
+        <div class="image-frame">
+          <img src="images/06_doctor.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 6枚目" loading="lazy">
+          <a class="tap-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" target="_blank" rel="noopener" aria-label="無料カウンセリング予約"></a>
+        </div>
+      </section>
+    
+      <section class="slide" data-slide="7">
+        <div class="image-frame">
+          <img src="images/07_access.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 7枚目" loading="lazy">
+          <a class="tap-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" target="_blank" rel="noopener" aria-label="無料カウンセリング予約"></a>
+        </div>
+      </section>
+    
   </main>
-  <script>
-    const slides = [...document.querySelectorAll('.slide')];
-    const scroller = document.getElementById('slides');
-    const pager = document.getElementById('pager');
-    const pageNo = document.getElementById('pageNo');
-    slides.forEach((_, i) => {
-      const d = document.createElement('span');
-      d.className = 'dot' + (i === 0 ? ' active' : '');
-      pager.appendChild(d);
-    });
-    const dots = [...document.querySelectorAll('.dot')];
-    const setActive = () => {
-      const idx = Math.round(scroller.scrollTop / window.innerHeight);
-      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-      pageNo.textContent = `${Math.min(idx + 1, slides.length)} / ${slides.length}`;
-    };
-    scroller.addEventListener('scroll', () => requestAnimationFrame(setActive), {passive:true});
-    window.addEventListener('resize', setActive);
-  </script>
+
+  <div class="progress" aria-hidden="true">
+    <span class="dot active"></span><span class="dot "></span><span class="dot "></span><span class="dot "></span><span class="dot "></span><span class="dot "></span><span class="dot "></span>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

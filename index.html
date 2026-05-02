@@ -2,125 +2,160 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>20代から始める歯列矯正｜名駅アール歯科・矯正歯科</title>
-  <meta name="description" content="名古屋・名駅で矯正するなら名駅アール歯科・矯正歯科。マウスピース矯正66万円、ワイヤー矯正55万円。土日診療・モニター募集あり。" />
+  <meta name="description" content="名古屋駅すぐ。名駅アール歯科・矯正歯科の20代女性向け矯正LP。マウスピース矯正・ワイヤー矯正・裏側矯正、土日診療対応。" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-doodles" aria-hidden="true"></div>
+  <div class="mode-switch" aria-label="表示切替">
+    <button class="active" data-mode="vertical">縦</button><button data-mode="horizontal">横</button>
+  </div>
 
-  <header class="topbar">
-    <div class="brand">名駅アール歯科・矯正歯科</div>
-    <button class="toggle" id="modeToggle" type="button">縦スライドに切替</button>
-  </header>
-
-  <main class="swipe horizontal" id="swipe">
-    <section class="slide hero">
-      <div class="photo hero-photo"><img src="images/hero.jpeg" alt="笑顔の女性" /></div>
-      <div class="bubble">笑うたび、<br>自分の口元が<br>好きになる。♡</div>
-      <p class="eyebrow">20代から始める</p>
-      <h1>歯列矯正</h1>
-      <p class="lead">名古屋・名駅で矯正するなら</p>
-      <div class="clinic">名駅アール歯科・矯正歯科</div>
-      <div class="badges">
-        <span>土日診療</span><span>名駅徒歩すぐ</span><span>選べる矯正</span>
+  <main class="slides vertical">
+    <section class="slide hero" id="top">
+      <img src="images/hero.webp" class="hero-img" alt="笑顔の女性" />
+      <div class="shade"></div>
+      <div class="inner hero-inner">
+        <div class="topline"><span class="logo-mark">R</span><span>名駅アール歯科・矯正歯科</span></div>
+        <p class="hand hero-hand">20代の今、<br>はじめる人増えてます♡</p>
+        <h1>笑った横顔、<br><em>もっと</em><br>好きになる。</h1>
+        <p class="lead">あなたの魅力を、もっと引き出す矯正を。</p>
+        <div class="circle-points">
+          <div><b>名古屋駅</b><small>徒歩すぐ</small></div>
+          <div><b>土日診療</b><small>対応</small></div>
+          <div><b>女性医師</b><small>在籍</small></div>
+        </div>
+        <div class="award-card">
+          <div class="award-thumb">Invisalign<br><strong>RED<br>DIAMOND</strong><br>2025</div>
+          <div><small>インビザライン年間症例数</small><b>全国トップクラス</b><span>レッドダイヤモンド・プロバイダー</span></div>
+        </div>
+        <div class="price-hero">
+          <div class="ribbon">モニター募集<br><b>3万円OFF</b></div>
+          <div class="price-main"><small>マウスピース矯正</small><p>66万円 → <b>63</b>万円</p></div>
+          <div class="monthly">月々<br><b>6,700円〜</b><small>120回払いの場合</small></div>
+        </div>
+        <div class="loan">デンタルローン 年利3.7% / 最大10年（120回払い）対応</div>
       </div>
     </section>
 
-    <section class="slide concerns">
-      <p class="num">02</p>
-      <h2>こんなお悩み<br>ありませんか？</h2>
-      <ul class="checklist">
-        <li>写真を撮ると口元が気になる</li>
-        <li>笑うときに手で隠してしまう</li>
-        <li>前歯のガタつきが気になる</li>
-        <li>横顔・口元の印象を変えたい</li>
-        <li>大人になってから矯正していいか不安</li>
-      </ul>
-      <img class="cutout right" src="images/pink.jpg" alt="女性イメージ" />
-      <p class="note">20代からの矯正、<br>遅くありません。♡</p>
+    <section class="slide white" id="worry">
+      <div class="inner">
+        <p class="eyebrow">Whiteness / Smile / Profile</p>
+        <h2>こんなお悩み<br>ありませんか？</h2>
+        <div class="checks">
+          <div>写真を撮ると口元が気になる</div>
+          <div>笑うときに手で隠してしまう</div>
+          <div>横顔や口元の印象を変えたい</div>
+          <div>矯正したいけど費用が不安</div>
+          <div>自分に合う矯正方法がわからない</div>
+          <div>大人になってから始めていいか不安</div>
+        </div>
+        <div class="note hand">そのお悩み、<br>矯正で解決できるかもしれません♡</div>
+      </div>
     </section>
 
     <section class="slide future">
-      <p class="num">03</p>
-      <h2>矯正すると、<br>こんな未来に。</h2>
-      <div class="grid4">
-        <div><img src="images/beauty.jpeg" alt="横顔"><p>横顔や口元が<br>整って印象UP</p></div>
-        <div><img src="images/relax.jpg" alt="自然な笑顔"><p>自然に笑えると<br>毎日がもっと楽しく</p></div>
-        <div><img src="images/blue.jpeg" alt="笑顔"><p>イベント前にも<br>自信をもって</p></div>
-        <div><img src="images/aligner.png" alt="マウスピース"><p>歯並びが整うと<br>清掃性にも◎</p></div>
+      <div class="inner">
+        <h2>矯正で変わる、<br><em>あなたの未来</em></h2>
+        <div class="future-grid">
+          <div><span>♡</span>横顔の印象が整う</div>
+          <div><span>♡</span>自然な笑顔に自信</div>
+          <div><span>♡</span>清潔感がUP</div>
+          <div><span>♡</span>歯磨きしやすく将来の健康にも</div>
+        </div>
+        <img src="images/aligner.webp" alt="マウスピース矯正イメージ" class="round-photo" />
       </div>
-      <div class="polaroid"><img src="images/consult.jpg" alt="相談イメージ"><span>未来のわたしのための、いちばんの自己投資♡</span></div>
     </section>
 
-    <section class="slide options">
-      <p class="num">04</p>
-      <h2>選べる矯正治療</h2>
-      <div class="option-card"><img src="images/aligner.png" alt="マウスピース矯正"><div><h3>マウスピース矯正</h3><p>透明で目立ちにくい／取り外し可能／痛みが少ない</p></div></div>
-      <div class="option-card"><img src="images/hero.jpeg" alt="ワイヤー矯正"><div><h3>ワイヤー矯正</h3><p>幅広い症例に対応／しっかり動かせる／コスパ◎</p></div></div>
-      <div class="option-card"><img src="images/relax.jpg" alt="裏側矯正"><div><h3>裏側矯正</h3><p>見えない矯正で安心／お仕事や接客業の方に人気</p></div></div>
-      <p class="note">あなたに合う治療を、<br>一緒に見つけます♡</p>
-    </section>
-
-    <section class="slide price">
-      <p class="num">05</p>
-      <h2>料金のご案内</h2>
-      <div class="pricebox"><span>マウスピース矯正<br><small>インビザライン</small></span><b>66万円</b><em>税込</em></div>
-      <div class="pricebox"><span>ワイヤー矯正</span><b>55万円</b><em>税込</em></div>
-      <div class="pricebox"><span>精密検査</span><b>33,000円</b><em>税込</em></div>
-      <div class="ribbon">今だけ！モニター募集で<br><strong>3万円OFF</strong> ♡</div>
-      <p class="tiny">※適用条件は医院までお問い合わせください。</p>
-    </section>
-
-    <section class="slide trust">
-      <p class="num">06</p>
-      <h2>圧倒的な実績</h2>
-      <div class="award">◇</div>
-      <p class="lead2">インビザライン年間症例数</p>
-      <h3>レッドダイヤモンド</h3>
-      <p class="accent">年間1,000症例の実績</p>
-      <p>ワイヤー矯正・裏側矯正も得意な<br>矯正専門クリニックです。</p>
-      <p class="tiny">※掲載時は証明資料・広告表現の確認推奨</p>
-    </section>
-
-    <section class="slide access">
-      <p class="num">07</p>
-      <h2>通いやすさも<br>大切に。</h2>
-      <ul class="checklist">
-        <li>名古屋駅から徒歩すぐ</li>
-        <li>土日診療で通いやすい</li>
-        <li>お仕事・学校帰りにも◎</li>
-      </ul>
-      <img class="bottom-photo" src="images/consult.jpg" alt="通院イメージ" />
-      <p class="bubble small">ライフスタイルに合わせて<br>通院できます♪</p>
-    </section>
-
-    <section class="slide consult">
-      <p class="num">08</p>
-      <h2>まずはお気軽に<br>ご相談ください♡</h2>
-      <div class="photo-strip">
-        <img src="images/consult.jpg" alt="女性1"><img src="images/relax.jpg" alt="女性2"><img src="images/pink.jpg" alt="女性3">
+    <section class="slide white methods">
+      <div class="inner">
+        <p class="eyebrow gold">Options</p>
+        <h2>あなたに合った<br>矯正方法が選べます</h2>
+        <article><h3>マウスピース矯正</h3><p>目立ちにくく、取り外しできる人気の矯正。</p><b>66万円</b><span>モニター価格 63万円 / 月々6,700円〜</span></article>
+        <article><h3>ワイヤー矯正</h3><p>幅広い歯並びに対応しやすい矯正。</p><b>55万円</b><span>月々5,900円〜</span></article>
+        <article><h3>裏側矯正</h3><p>見えにくさに配慮した本格矯正。</p><b>79万円</b><span>月々8,200円〜</span></article>
       </div>
-      <p class="pinktext">無料カウンセリング実施中！</p>
-      <div class="chips"><span>カウンセリング</span><span>治療方法の説明</span><span>お見積り相談</span></div>
-      <p>無理な勧誘は一切ありませんので、<br>安心してご来院ください。</p>
+    </section>
+
+    <section class="slide cases">
+      <div class="inner">
+        <h2>症例実績</h2>
+        <p class="bodycopy">出っ歯・ガタガタ・すきっ歯など、気になる口元のお悩みに合わせて治療計画をご提案します。</p>
+        <div class="case-card"><div class="ba"><img src="images/case1-before.webp" alt="症例Before"><img src="images/case1-after.webp" alt="症例After"></div><h3>前歯のガタつき・口元のお悩み</h3><small>※効果には個人差があります</small></div>
+        <div class="case-card"><div class="ba"><img src="images/case2-before.webp" alt="症例Before"><img src="images/case2-after.webp" alt="症例After"></div><h3>出っ歯・横顔のお悩み</h3><small>※治療内容・期間・費用は症例により異なります</small></div>
+      </div>
+    </section>
+
+    <section class="slide voice white">
+      <div class="inner">
+        <p class="eyebrow gold">Voice</p>
+        <h2>患者様の声</h2>
+        <div class="voice-card"><h3>口元を隠す毎日から、自信を持って笑える私に。</h3><p>昔から歯並びがコンプレックスで、人前で笑うのが苦手でした。今では写真を撮るのも前より楽しみになりました。</p><span>20代女性 / マウスピース矯正</span></div>
+        <div class="voice-card"><h3>長年のコンプレックスが、笑顔に変わりました。</h3><p>横顔や口元がずっと気になっていました。目立ちにくく進められて、もっと早く相談すればよかったと思っています。</p><span>20代女性 / 歯列矯正</span></div>
+        <small class="caution">※個人の感想です。効果には個人差があります。</small>
+      </div>
+    </section>
+
+    <section class="slide flow">
+      <div class="inner">
+        <h2>相談から治療開始まで</h2>
+        <ol class="flow-list">
+          <li><b>01 無料カウンセリング</b><span>歯並びのお悩みや希望を丁寧に伺います。</span></li>
+          <li><b>02 精密検査</b><span>お口の状態を詳しく確認。検査費用33,000円（税込）。</span></li>
+          <li><b>03 治療計画のご提案</b><span>あなたに合う矯正方法をご提案します。</span></li>
+          <li><b>04 治療スタート</b><span>無理なく通えるスケジュールで進めます。</span></li>
+        </ol>
+        <img src="images/doctor-consult.webp" alt="カウンセリングイメージ" class="wide-photo" />
+      </div>
+    </section>
+
+    <section class="slide doctors white">
+      <div class="inner">
+        <h2>経験と実績をもとに<br>あなたに合った矯正治療を</h2>
+        <img src="images/doctors.webp" alt="理事長小池陵馬と院長古田裕太郎" class="doctor-photo" />
+        <div class="doctor-box"><small>理事長</small><h3>小池 陵馬</h3><p>豊富な症例実績をもとに、患者さま一人ひとりに合った最適な矯正治療をご提案します。</p></div>
+        <div class="doctor-box"><small>院長</small><h3>古田 裕太郎</h3><p>丁寧なカウンセリングを大切にし、安心して矯正治療を始められるようサポートします。</p></div>
+      </div>
+    </section>
+
+    <section class="slide clinic">
+      <div class="inner">
+        <h2>通いやすく、相談しやすい院内</h2>
+        <div class="clinic-grid">
+          <img src="images/clinic-room.webp" alt="診療室">
+          <img src="images/waiting.webp" alt="待合室">
+          <img src="images/counseling-room.webp" alt="カウンセリングルーム">
+          <img src="images/sign.webp" alt="院内サイン">
+        </div>
+      </div>
+    </section>
+
+    <section class="slide access white">
+      <div class="inner">
+        <h2>アクセス</h2>
+        <div class="access-card">
+          <h3>名駅アール歯科・矯正歯科</h3>
+          <p>〒450-0002<br>愛知県名古屋市中村区名駅4丁目10-25<br>名駅IMAIビル11階</p>
+          <p>TEL：052-581-1051</p>
+          <p>平日 10:00〜13:00 / 14:30〜19:30<br>土曜 10:00〜13:00 / 14:00〜18:00<br>日曜 10:00〜15:00<br>休診日：祝日</p>
+          <div class="access-tag">名古屋駅から徒歩すぐ / 土日診療対応</div>
+        </div>
+      </div>
     </section>
 
     <section class="slide final">
-      <p class="num">09</p>
-      <h2>20代からの歯列矯正、<br>わたしらしくはじめよう。</h2>
-      <h3>名駅アール歯科・<br>矯正歯科</h3>
-      <div class="menu"><span>マウスピース矯正</span><span>ワイヤー矯正</span><span>裏側矯正対応</span><span>土日診療</span></div>
-      <a class="cta big" href="tel:0000000000">無料相談を予約する</a>
+      <div class="inner final-inner">
+        <p class="hand">まずはお気軽にご相談ください♡</p>
+        <h2>私に合う矯正を<br>相談してみる</h2>
+        <p>カウンセリング無料・無理な勧誘なし・支払い方法相談OK</p>
+        <a href="tel:0525811051" class="cta tel">電話する</a>
+        <a href="#top" class="cta">WEB予約へ</a>
+        <small>名駅アール歯科・矯正歯科<br>愛知県名古屋市中村区名駅4丁目10-25 名駅IMAIビル11階</small>
+      </div>
     </section>
   </main>
-
-  <footer class="fixed-cta">
-    <span>スワイプして次へ</span>
-    <a href="tel:0000000000">無料相談を予約</a>
-  </footer>
-
+  <nav class="bottom-cta"><a href="#top">無料相談を予約する</a></nav>
   <script src="script.js"></script>
 </body>
 </html>

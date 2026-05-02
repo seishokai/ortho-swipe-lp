@@ -1,10 +1,10 @@
-const swipe = document.getElementById('swipe');
-const toggle = document.getElementById('modeToggle');
-let vertical = false;
-toggle.addEventListener('click', () => {
-  vertical = !vertical;
-  swipe.classList.toggle('vertical', vertical);
-  swipe.classList.toggle('horizontal', !vertical);
-  toggle.textContent = vertical ? '横スライドに切替' : '縦スライドに切替';
-  swipe.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-});
+const slides = document.querySelector('.slides');
+const buttons = document.querySelectorAll('[data-mode]');
+function setMode(mode){
+  slides.classList.toggle('horizontal', mode === 'horizontal');
+  slides.classList.toggle('vertical', mode !== 'horizontal');
+  buttons.forEach(b=>b.classList.toggle('active', b.dataset.mode===mode));
+  localStorage.setItem('swipeMode', mode);
+}
+buttons.forEach(btn=>btn.addEventListener('click',()=>setMode(btn.dataset.mode)));
+setMode(localStorage.getItem('swipeMode') || 'vertical');

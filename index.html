@@ -1,30 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>名駅アール歯科・矯正歯科｜矯正無料カウンセリング</title>
-  <meta name="description" content="名古屋駅すぐ。名駅アール歯科・矯正歯科の矯正無料カウンセリング予約ページです。" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>名駅アール歯科・矯正歯科｜矯正スワイプLP</title>
+  <meta name="description" content="名古屋駅徒歩圏。矯正相談・無料カウンセリング予約はこちら。" />
+  <meta property="og:title" content="名駅アール歯科・矯正歯科｜矯正スワイプLP" />
+  <meta property="og:description" content="名古屋駅徒歩圏。矯正相談・無料カウンセリング予約はこちら。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/01_firstview.jpg" />
+  <style>
+    :root{
+      --cta:#e64f7a;
+      --cta2:#c93c67;
+      --bg:#fff6f8;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;color:#222;}
+    body{overflow-x:hidden;}
+    .lp{width:100%;max-width:430px;margin:0 auto;background:#fff;box-shadow:0 0 30px rgba(0,0,0,.08);padding-bottom:calc(88px + env(safe-area-inset-bottom));}
+    .slide{position:relative;width:100%;line-height:0;background:#fff;scroll-margin-top:0;}
+    .slide a.image-link{display:block;width:100%;}
+    .slide img{display:block;width:100%;height:auto;margin:0;padding:0;border:0;}
+    .fixed-cta{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(400px,calc(100vw - 24px));z-index:20;text-decoration:none;background:linear-gradient(180deg,var(--cta),var(--cta2));color:#fff;border-radius:999px;box-shadow:0 10px 24px rgba(201,60,103,.35);padding:13px 18px;text-align:center;font-weight:800;letter-spacing:.03em;line-height:1.25;font-size:17px;}
+    .fixed-cta small{display:block;font-size:11px;font-weight:700;opacity:.95;margin-bottom:2px;}
+    .fixed-cta .arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:24px;}
+    .top-link{position:fixed;right:12px;bottom:calc(78px + env(safe-area-inset-bottom));z-index:19;background:rgba(255,255,255,.88);border:1px solid rgba(0,0,0,.08);border-radius:999px;color:#555;text-decoration:none;font-size:12px;padding:8px 10px;box-shadow:0 4px 16px rgba(0,0,0,.08);}
+    @media (min-width: 768px){.lp{max-width:430px}.fixed-cta{max-width:400px}}
+    @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+  </style>
 </head>
 <body>
-  <main class="swipe" id="swipe">
-    <section class="slide"><img src="images/01_top.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 1枚目"></section>
-    <section class="slide"><img src="images/02_worries.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 2枚目"></section>
-    <section class="slide"><img src="images/03_before_after.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 3枚目"></section>
-    <section class="slide"><img src="images/04_select.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 4枚目"></section>
-    <section class="slide"><img src="images/05_wire.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 5枚目"></section>
-    <section class="slide"><img src="images/06_mouthpiece.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 6枚目"></section>
-    <section class="slide"><img src="images/07_lingual.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 7枚目"></section>
-    <section class="slide"><img src="images/08_voice.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 8枚目"></section>
-    <section class="slide"><img src="images/09_doctor_access.jpg" alt="名駅アール歯科・矯正歯科 スワイプLP 9枚目"></section>
+  <main class="lp" id="top" aria-label="矯正スワイプLP">
+    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/01_firstview.jpg" alt="長年の歯並びコンプレックス、もう隠さなくていい。無料カウンセリング予約" loading="eager"></a></section>
+    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/02_worries.jpg" alt="こんなお悩みありませんか。矯正で解決します" loading="lazy"></a></section>
+    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/03_wire.jpg" alt="表側ワイヤー矯正の説明" loading="lazy"></a></section>
+    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/04_mouthpiece.jpg" alt="マウスピース矯正の説明" loading="lazy"></a></section>
+    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/05_lingual.jpg" alt="裏側矯正・ハーフリンガル矯正の説明" loading="lazy"></a></section>
+    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/06_doctors.jpg" alt="ドクター紹介と矯正実績" loading="lazy"></a></section>
+    <section class="slide"><a class="image-link" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" aria-label="無料カウンセリング予約"><img src="images/07_access.jpg" alt="名古屋駅から徒歩で通える3つの医院。アクセスページ" loading="lazy"></a></section>
   </main>
-
-  <a class="fixed-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947" target="_blank" rel="noopener">
-    <span>相談無料</span>
+  <a class="top-link" href="#top">↑ TOP</a>
+  <a class="fixed-cta" href="https://reserve.shareconnect.co.jp/?r=don2bu&treatment_ids=1766627271947">
+    <small>相談無料・24時間WEB予約受付中</small>
     無料カウンセリング予約
+    <span class="arrow">›</span>
   </a>
-
-  <script src="script.js"></script>
 </body>
 </html>
